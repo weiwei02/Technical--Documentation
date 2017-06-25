@@ -1,3 +1,20 @@
+# Technical--Documentation
+共享技术文档
+
+##  项目简介
+  为为日常工作和学习的总结。
+
+### 技术文档主站简介
+
+   主站文档是我在前人的脚步上对研发的学习和总结纪录，在以后的日子里，我会将自己研发工作中所可能遇见问题和心得在这里纪录下来，公开的分享。世界的存在很美好，开源的存在很精彩。从今天起，我便借助开源的力量，向改变人类的生活方式这条路迈进。
+
+#####  点击这里直接进入[为为技术文档主站](https://weiwei02.github.io/Technical--Documentation/)，或者访问 [https://weiwei02.github.io/Technical--Documentation/](https://weiwei02.github.io/Technical--Documentation/)
+
+##### 与文档配套的 [Technical--Documentation](https://github.com/weiwei02/Technical--Documentation)项目的地址是 https://github.com/weiwei02/Technical--Documentation
+
+
+
+
 # *.class文件介绍
 
   一般来讲*.class文件是*.java文件在编译器编译后生成的jvm能够运行的文件，*.class文件又常被称为字节码文件。java在创始之初，就提倡“一次编写，处处运行的概念”，在当今编程圈中这个概念早已不是什么特例。java通过将开发人员所编写的java代码编译成class文件，然后由jvm虚拟机在执行时将不分平台的class文件中的字节码，再翻译成机器码，交给硬件执行。java就是靠jvm虚拟机的这个设计来实现与平台无关的特性的。class文件不但与硬件平台和操作系统无关，也和具体的编程语言无关，就目前来说，如函数式编程语言scala与Groovy都可以通过自己的编译器将源代码编译成class文件，在jvm上运行。
@@ -77,6 +94,7 @@
 | CONSTANT_MethodHandle_info	 |  １５	| 表示方法句柄
 | CONSTANT_InvokeDynamic_info	 | １８	  | 表示一个动态方法调用点
    *表 2 常量池数据项目类型表*  
+
    这14种常量结构表开始的第一个字节都是一个u1类型的标识位，其值就是表2中每项常量表类型所对应的标识列的值，代表当前常量属于哪种常量类型。这14种常量类型各自有自己不同的表结构，详情如表 3 所示。
 
    |            常量	               |    项目	  | 类型  |      	描述
@@ -132,3 +150,16 @@
    *表 3 常量池中14中常量的结构总表*
 
    在表 3 中可以看到class文件所支持的所有的常量的结构信息，另外由于class中的类名、方法、字段都要用CONSTANT_Utf8_info型的常量来描述名称，所以CONSTANT_Utf8_info的最大长度也是java中类名、方法名或字段的最大长度65535，如果超出这个最大长度，便会无法编译。
+
+
+
+  ## 引用
+  在写作本文的过程中引用了以下资料，为为在此深深谢过以下资料的作者。
+
+  1. 《The Java Virtual Machine Specification》
+  2. 《深入理解Java虚拟机：JVM高级特性与最佳实践/周志明著.——2版.——北京：机械工业出版社，2013.6》
+  ## 关于
+
+  本项目和文档中所用的内容仅供学习和研究之用，转载或引用时请指明出处。如果你对文档有疑问或问题，请在项目中给我留言或发email到 weiwei02@vip.qq.com
+
+  > from weiwei.wang 20170625
