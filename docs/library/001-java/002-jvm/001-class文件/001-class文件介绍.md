@@ -4,4 +4,37 @@
   综合来讲，class文件有以下两点特性：
   * 与硬件和操作系统平台无关
   * 与源码所使用的编程语言无关
-  
+
+# class类文件的结构
+  > 每一个class文件都唯一对应着java类或接口枚举等定义信息，但类不一定都定义在class文件中，类可能是由类加载器动态生成的。
+
+  class文件所以被称之为字节码据我猜测可能是因为class文件以8位（1字节）为单位进行存储的二进制信息。__字节码中各个数据项目严格按照顺序紧凑的排列，中间没有任何分割符。__在需要存储整型或浮点型这些大于8位的数据项目时，则会使用Big-Endian的字节序进行存储，将最高位字节放在地址最低位，最低位字节放在地址最高位。
+
+  class文件格式采用表来存储数据，表中有无符号数和表两种数据类型。对于这两种数据类型说明如下：
+  * **无符号数**： 无符号数是基本的数据类型，可以用来表示数字、索引引用、数量值或者按照UTF-8编码构成的字符串。如u1,u2,u4,u8分别代表1,2,4,8个字节字节的无符号数。
+  * **表**： 表是由多个无符号数或者其它表作为数据项所组成的复合数据结构，表用于描述层次关系和复合的数据结构，整个class文件就是一张表。通常表以 _info 结尾。如表1就是一个class的表示例。
+
+| 类型 | 名称 | 数量  
+| :------: | :------: | :------:  
+| u4 | magic | 1
+| u2 | minor_version | 1
+| u2 | major_version | 1
+| u2 | constant_pool_count | 1
+| cp_info | constant_pool | constant_pool_count - 1
+| u2 | asscess_flags | 1
+| u2 | this_class | 1
+| u2 | super_class | 1
+| u2 | interfaces_count | 1
+| u2 | interfaces | interfaces_count
+| u2 | fields_count | 1
+| field_info | fields | fields_count
+| u2 | methods_count | 1
+|method_info|methods|method_count
+| u2 | attributes_count | 1
+| attribute_info | attributes | attributes_count
+
+*表 1 class文件格式*
+
+   class文件的顺序和格式必须严格实现按照上述规则，否则jvm将不能识别执行。
+
+## Magic Number 魔数
