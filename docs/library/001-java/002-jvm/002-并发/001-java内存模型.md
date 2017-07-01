@@ -58,3 +58,20 @@ JMM规定了在使用以上8种内存操作时必须遵守以下规则：
 
 
   ## 关于
+
+
+
+<link rel="stylesheet" href="[path to fork.css]">
+<div class="fork-me-wrapper">
+
+  <div class="fork-me">
+
+    <a class="fork-me-link" href="https://github.com/edull24/fork-me-on-github">
+
+      <span class="fork-me-text">Fork Me On GitHub</span>
+
+    </a>
+
+  </div>
+
+</div>
