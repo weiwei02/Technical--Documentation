@@ -89,5 +89,6 @@ theme: tranquilpeak
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/weiwei02/weiwei02.github.io.git
+  # repository: https://github.com/weiwei02/weiwei02.github.io.git
+  repository: https://git.coding.net/weiwei02/weiwei02.coding.me.git
   branch: master
