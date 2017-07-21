@@ -92,3 +92,7 @@ deploy:
   # repository: https://github.com/weiwei02/weiwei02.github.io.git
   repository: https://git.coding.net/weiwei02/weiwei02.coding.me.git
   branch: master
+
+#文章内目录级数
+# toc:
+#   maxDepth: 3

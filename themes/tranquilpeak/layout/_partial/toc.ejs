@@ -1,0 +1,8 @@
+<%- partial('toc_style')%>
+<aside id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <%- toc(page.content, {
+      class: 'post-toc',
+      list_number: false
+  }) %>
+</aside>

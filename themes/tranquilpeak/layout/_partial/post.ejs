@@ -20,7 +20,11 @@
     postContent = postContent.replace(/<!-- ?endcontent ?-->/g, '</div>')
                                .replace(/<!-- ?content ?-->/g, '<div class="main-content-wrap">');
 %>
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+
+
+<div class="post">
+  <%- partial('toc')%>
+<article class="" itemscope itemType="http://schema.org/BlogPosting">
     <% if (post.coverCaption) { %>
         <span class="post-header-cover-caption caption"><%= post.coverCaption %></span>
     <% } %>
@@ -52,4 +56,4 @@
         <% } %>
     </div>
 </article>
-
+</div>

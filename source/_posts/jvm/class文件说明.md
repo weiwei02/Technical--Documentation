@@ -2,27 +2,15 @@
 title: class文件介绍
 date: 2017-07-21 00:19:24
 tags:
-  java
+- java
+- jvm
 categories:
- java
+- java
+- jvm
 author: 为为
 avatar: /images/favicon.png
 ---
-# Technical--Documentation
-共享技术文档
-
-##  项目简介
-  为为日常工作和学习的总结。
-
-### 技术文档主站简介
-
-   主站文档是我在前人的脚步上对研发的学习和总结纪录，在以后的日子里，我会将自己研发工作中所可能遇见问题和心得在这里纪录下来，公开的分享。世界的存在很美好，开源的存在很精彩。从今天起，我便借助开源的力量，向改变人类的生活方式这条路迈进。
-
-#####  点击这里直接进入[为为技术文档主站](https://weiwei02.github.io/Technical--Documentation/)，或者访问 [https://weiwei02.github.io/Technical--Documentation/](https://weiwei02.github.io/Technical--Documentation/)
-
-##### 与文档配套的 [Technical--Documentation](https://github.com/weiwei02/Technical--Documentation)项目的地址是 https://github.com/weiwei02/Technical--Documentation
-
-### 非原创声明
+ 非原创声明
    >本文并非我的原创文章，而是我学习jvm时的笔记。文中的材料与数据大部分来自于其它资料，详细请查看本文的引用章节。
 
 

@@ -58,10 +58,10 @@ sidebar:
             url: /#about
             icon: question
     author_links:
-        # github:
-        #     title: global.github
-        #     url: https://github.com/
-        #     icon: github
+        github:
+            title: global.github
+            url: https://github.com/weiwei02
+            icon: github
         # stack_overflow:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users
@@ -82,10 +82,10 @@ sidebar:
         #     title: global.linkedin
         #     url: https://www.linkedin.com/profile/
         #     icon: linkedin
-        # mail:
-        #     title: global.mail
-        #     url: mailto:
-        #     icon: envelope-o
+        mail:
+            title: global.mail
+            url: mailto:weiwei02@vip.qq.com
+            icon: envelope-o
     # rss:
     #     rss:
     #         title: global.rss
@@ -105,28 +105,29 @@ sidebar:
 header:
     right_link:
         url: /#about
-        icon:
-        class:
+        icon: wewei.jpg
+        class:  技术，改变世界
 
 
 # Author
 # Your biography and your job is editable in each languages files in `languages` folder
 author:
     email: weiwei02@vip.qq.com
-    location:
+    location: 北京，海淀
     # Your profile picture located in folder `source/_images/` (development)
     # or in `source/assets/images/` (production)
     # or you can use an external url
     # Overwritten by your gravatar image if `gravatar_email` is filled
-    picture:
+    picture:  weiwei.jpg
     # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter:
+    # qq: 138193320
+    bio: 技术，改变世界
     # Your personal google plus profile id, not your blog or business page id.
     # E.g : `+JohnDoe` or `123812884128439`
-    google_plus:
+    # google_plus:
     # Your businnes google plus profile id. If not provided, personal will be used instead.
     # E.g : `+Tranquilpeak` or `123812884128439`
-    google_plus_business:
+    # google_plus_business:
 
 
 # Customization
@@ -187,11 +188,11 @@ google_analytics_id:
 # Your Baidu analystics web property ID : 9505a5af654a2478f93fd6c0ae4f687d
 baidu_analytics_id:
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-gravatar_email:
-# Your Facebook user ids used to connect your blog with your facebook user accounts (Facebook Insights). Separate ids with comma. e.g : 9830047,1003342
-fb_admin_ids:
-# Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
-fb_app_id:
+# gravatar_email:
+# # Your Facebook user ids used to connect your blog with your facebook user accounts (Facebook Insights). Separate ids with comma. e.g : 9830047,1003342
+# fb_admin_ids:
+# # Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
+# fb_app_id:
 
 
 # Sharing options
@@ -221,10 +222,10 @@ sharing_options:
         title: "Qzone"
         icon: "fa-star"
         url: "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{post.permalink}}"
-    renren:
-        title: "Renren"
-        icon: "fa-renren"
-        url: "http://widget.renren.com/dialog/share?resourceUrl={{post.permalink}}"
+    # renren:
+    #     title: "Renren"
+    #     icon: "fa-renren"
+    #     url: "http://widget.renren.com/dialog/share?resourceUrl={{post.permalink}}"
     # Russian social networks
     # vk:
     #     title: "VK"

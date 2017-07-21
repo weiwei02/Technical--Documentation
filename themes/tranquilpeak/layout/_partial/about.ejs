@@ -19,13 +19,13 @@
         <% } %>
             <h4 id="about-card-name"><%= config.author %></h4>
         <% if (__('author.bio')) { %>
-            <div id="about-card-bio"><%- markdown(__('author.bio')) %></div>
+            <div id="about-card-bio"><%- markdown(__('技术，改变世界')) %></div>
         <% } %>
         <% if (__('author.job')) { %>
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <%- markdown(__('author.job')) %>
+                <%- markdown(__('软件工程师')) %>
             </div>
         <% } %>
         <% if (theme.author.location) { %>
@@ -35,5 +35,9 @@
                 <%= theme.author.location %>
             </div>
         <% } %>
+        <div>
+          <a href="https://weiwei02.github.io/" target="_blank">国外主站</a>
+          <a href="https://weiwei02.cording.me/" target="_blank">国内主站</a>
+        </div>
     </div>
 </div>
