@@ -177,8 +177,38 @@ avatar: /images/favicon.png
   在声明接口索引之前，class文件首先会声明一个u2类型的数据代表接口索引的总数量，其后面紧跟者就是接口索引集合，如果该类没有实现任何接口，那么接口索引的总数量的值就是0。接口索引同样也指向常量池中的CONSTANT_Class_info类型的常量，使用CONSTANT_Utf8_info的字符串常量来表示接口的全限定名。
 
   ### 字段表集合
-  --20170701 00:10:00 编辑到字段表集合
-   字段集合用于描述接口或类中所声明的全局变量。如public，static、final等词都是用来描述某个字段的修饰词。因为java中可用来修饰字段的修饰符有限，所以class文件对于字段的修饰符的表示是通过使用标识位来实现的。表5详细分析了字段表的格式。
+  > 20170701 00:10:00 编辑到字段表集合
+
+   字段集合用于`描述`接口或类中所声明的全局变量。如public，static、final等词都是用来描述某个字段的修饰词。因为java中可用来修饰字段的修饰符有限，所以class文件对于字段的修饰符的表示是通过使用标识位来实现的。表5详细分析了字段表的数据结构。
+
+   | 类型 |      名称        | 数量
+   | :--- | :-----------    |
+   | u2   | access_flags    | 1
+   | u2   | name_index      | 1
+   | u2   | descriptor_index| 1
+   | u2   | attributes_count| 1
+   |attrobute_info| attributes| attributes_count
+   表5 字段表的数据结构
+
+   access_flags标识位中存放的是字段的修饰符，使用标志位进行标识区分。具体区分方式如表6字段访问标识表所示。
+
+   |        标识名称       |   标识值    |        含义
+   | :------------------- | :--------- |
+   | ACC_PUBLIC           | 0x0001     | public
+   | ACC_PRIVATE          | 0x0002     | private
+   | ACC_PROTECTED        | 0x0004     | protected
+   | ACC_STATIC           | 0x0008     | static
+   | ACC_FINAL            | 0x0010     | final
+   | ACC_VOLATILE         | 0x0040     | volatile
+   | ACC_TRANSIENT        | 0x0080     | transient
+   | ACC_SYNTHETIC        | 0x1000     | 该字段是否由编译器自动生成的
+   | ACC_ENUM             | 0x4000     | 字段是否是enum
+   表6 字段访问标识对应表
+
+   name_index 和 descriptor_index 都是对常量池索引的引用，name_index引用的是字段的名称，descriptor_index引用的是字段和方法的描述符。
+
+   > 20170801 00:10:00 编辑到字段表集合
+
 ## 引用
 
   本文是对class文件的学习笔记，笔记的内容并非是原创，而是大量参考其它资料。在写作本文的过程中引用了以下资料，为为在此深深谢过以下资料的作者。
