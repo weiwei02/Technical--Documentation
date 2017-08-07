@@ -59,15 +59,18 @@ index_generator:
 default_category: uncategorized
 category_map:
   java: java
-  大数据: data
-  人工智能: ai
-  软件工程: soft
+  big-data: 大数据
+  ai: 人工智能
+  soft: 软件工程
+  framework: 架构
 tag_map:
   java: java
-  大数据: data
-  人工智能: ai
-  软件工程: soft
-  java虚拟机: jvm
+  big-data: 大数据
+  ai: 人工智能
+  soft: 软件工程
+  jvm: java虚拟机
+  framework: 架构
+  theory: 原理
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
