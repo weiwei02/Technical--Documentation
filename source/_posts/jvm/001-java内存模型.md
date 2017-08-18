@@ -169,4 +169,6 @@ volatile 变量具有 synchronized 的可见性特性，但是不具备锁的原
 
 
   ## 关于
-  原文链接 https://weiwei02.github.io/2017/07/02/jvm/001-java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/
+  原文链接 https://weiwei02.github.io/2017/07/02/jvm/001-java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/  
+  我的[github](https://github.com/weiwei02/): https://github.com/weiwei02/  
+  我相信技术能够改变世界。

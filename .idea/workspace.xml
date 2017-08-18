@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="294cd112-e3e9-4bd3-8e39-68a33a612019" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/jsimple" afterPath="$PROJECT_DIR$/themes/jsimple" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/database/theory/CAP原理.md" afterPath="$PROJECT_DIR$/source/_posts/database/theory/CAP原理.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/framework/网站可伸缩架构分析.md" afterPath="$PROJECT_DIR$/source/_posts/framework/网站可伸缩架构分析.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/jvm/001-java内存模型.md" afterPath="$PROJECT_DIR$/source/_posts/jvm/001-java内存模型.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SECOND">
-              <first_editor relative-caret-position="496">
+              <first_editor relative-caret-position="4260">
                 <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
                 <folding>
                   <marker date="1501605752355" expanded="true" signature="11:20" ph="class文件介绍" />
@@ -110,7 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,8 +148,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,6 +428,9 @@
       <workItem from="1500557863083" duration="664000" />
       <workItem from="1502182233925" duration="272000" />
       <workItem from="1502182588111" duration="1628000" />
+      <workItem from="1502280553788" duration="1654000" />
+      <workItem from="1502282234765" duration="13000" />
+      <workItem from="1502331598732" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="新建文档初始页">
       <created>1498389570616</created>
@@ -439,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6906000" />
+    <option name="totallyTimeSpent" value="8589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1932" height="1092" extended-state="0" />
@@ -450,9 +454,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2831001" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.295479" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -509,6 +513,84 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="4260">
+            <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <folding>
+              <marker date="1501605752355" expanded="true" signature="11:20" ph="class文件介绍" />
+              <marker date="1501605752355" expanded="true" signature="27:46" ph="2017-07-21 00:19:24" />
+              <marker date="1501605752355" expanded="true" signature="47:65" ph="tags: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="55:59" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="62:65" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="66:90" ph="categories: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="80:84" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="87:90" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="99:101" ph="为为" />
+              <marker date="1501605752355" expanded="true" signature="110:129" ph="/images/favicon.png" />
+            </folding>
+          </first_editor>
+          <second_editor>
+            <js_state>
+              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:3535}" />
+            </js_state>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="4260">
+            <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <folding>
+              <marker date="1501605752355" expanded="true" signature="11:20" ph="class文件介绍" />
+              <marker date="1501605752355" expanded="true" signature="27:46" ph="2017-07-21 00:19:24" />
+              <marker date="1501605752355" expanded="true" signature="47:65" ph="tags: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="55:59" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="62:65" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="66:90" ph="categories: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="80:84" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="87:90" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="99:101" ph="为为" />
+              <marker date="1501605752355" expanded="true" signature="110:129" ph="/images/favicon.png" />
+            </folding>
+          </first_editor>
+          <second_editor>
+            <js_state>
+              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:3535}" />
+            </js_state>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="4260">
+            <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <folding>
+              <marker date="1501605752355" expanded="true" signature="11:20" ph="class文件介绍" />
+              <marker date="1501605752355" expanded="true" signature="27:46" ph="2017-07-21 00:19:24" />
+              <marker date="1501605752355" expanded="true" signature="47:65" ph="tags: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="55:59" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="62:65" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="66:90" ph="categories: &lt;2 items&gt;" />
+              <marker date="1501605752355" expanded="true" signature="80:84" ph="java" />
+              <marker date="1501605752355" expanded="true" signature="87:90" ph="jvm" />
+              <marker date="1501605752355" expanded="true" signature="99:101" ph="为为" />
+              <marker date="1501605752355" expanded="true" signature="110:129" ph="/images/favicon.png" />
+            </folding>
+          </first_editor>
+          <second_editor>
+            <js_state>
+              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:3535}" />
+            </js_state>
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -576,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/jvm/class文件说明.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SECOND">
-          <first_editor relative-caret-position="496">
+          <first_editor relative-caret-position="4260">
             <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
             <folding>
               <marker date="1501605752355" expanded="true" signature="11:20" ph="class文件介绍" />

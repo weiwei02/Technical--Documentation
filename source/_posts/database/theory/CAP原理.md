@@ -1,5 +1,5 @@
 ---
-title: 数据CAP原理
+title: -数据库原理-数据CAP原理
 date: 2017-08-03 10:41:00
 tags:
 - database
