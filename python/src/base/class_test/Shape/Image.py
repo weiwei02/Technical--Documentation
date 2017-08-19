@@ -64,7 +64,7 @@ class Image:
         self.__judge_coordinate(coordinate)
         return self.__data.get(tuple(coordinate), self.__background)
     
-    def __setitem__(self, key, coordinate, color):
+    def __setitem__(self, coordinate, color):
         self.__judge_coordinate(coordinate)
         if color == self.__background:
             self.__data.pop(tuple(coordinate), None)
@@ -118,7 +118,53 @@ class Image:
         finally:
             if fh is not None:
                 fh.close()
-                
+
+    def __export_xpm(self, filename):
+        """Exports the image as an XPM file if less than 8930 colors are
+        used
+        """
+        name = os.path.splitext(os.path.basename(filename))[0]
+        count = len(self.__colors)
+        chars = [chr(x) for x in range(32, 127) if chr(x) != '"']
+        if count > len(chars):
+            chars = []
+            for x in range(32, 127):
+                if chr(x) == '"':
+                    continue
+                for y in range(32, 127):
+                    if chr(y) == '"':
+                        continue
+                    chars.append(chr(x) + chr(y))
+        chars.reverse()
+        if count > len(chars):
+            raise ExportError("cannot export XPM: too many colors")
+        fh = None
+        try:
+            fh = open(filename, "w", encoding="ascii")
+            fh.write("/* XPM */\n")
+            fh.write("static char *{0}[] = {{\n".format(name))
+            fh.write("/* columns rows colors chars-per-pixel */\n")
+            fh.write('"{0.width} {0.height} {1} {2}",\n'.format(
+                self, count, len(chars[0])))
+            char_for_colour = {}
+            for color in self.__colors:
+                char = chars.pop()
+                fh.write('"{char} c {color}",\n'.format(**locals()))
+                char_for_colour[color] = char
+            fh.write("/* pixels */\n")
+            for y in range(self.height):
+                row = []
+                for x in range(self.width):
+                    color = self.__data.get((x, y), self.__background)
+                    row.append(char_for_colour[color])
+                fh.write('"{0}",\n'.format("".join(row)))
+            fh.write("};\n")
+        except EnvironmentError as err:
+            raise ExportError(str(err))
+        finally:
+            if fh is not None:
+                fh.close()
+
     def export(self, filename):
         """导出图片到文件"""
         if filename.lower().endswith(".xpm"):
@@ -126,3 +172,19 @@ class Image:
         else:
             raise ExportError("unsupported export format:" +
                               os.path.split(filename)[1])
+
+
+if __name__ == '__main__':
+    border_color = "#FF0000"  # red
+    square_color = "#0000FF"  # blue
+    width, height = 240, 60
+    midx, midy = width // 2, height // 2  # x 除以 y，舍弃小数部分
+    image = Image(width, height, "square_eye.img")
+    for x in range(width):
+        for y in range(height):
+            if x < 5 or x >= width - 5 or y < 5 or y >= height -5:
+                image[x, y] = border_color
+            elif midx - 20 < x < midx + 20 and midy - 20 < y < midy + 20:
+                image[x, y] = square_color
+    image.save()
+    image.export("square_eye.xpm")
