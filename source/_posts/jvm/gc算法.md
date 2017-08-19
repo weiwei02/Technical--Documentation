@@ -80,10 +80,11 @@ avatar: /images/favicon.png
   2. 《深入理解Java虚拟机：JVM高级特性与最佳实践/周志明著.——2版.——北京：机械工业出版社，2013.6》
   3. 《Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide》
 
+    非原创声明
+      >本文并非我的原创文章，而是我学习jvm时的笔记。文中的材料与数据大部分来自于其它资料，详细请查看本文的引用章节。
 
 ## 关于
 
-    本项目和文档中所用的内容仅供学习和研究之用，转载或引用时请指明出处。如果你对文档有疑问或问题，请在项目中给我留言或发email到 weiwei02@vip.qq.com
-
-  非原创声明
-    >本文并非我的原创文章，而是我学习jvm时的笔记。文中的材料与数据大部分来自于其它资料，详细请查看本文的引用章节。
+    本项目和文档中所用的内容仅供学习和研究之用，转载或引用时请指明出处。如果你对文档有疑问或问题，请在项目中给我留言或发email到 weiwei02@vip.qq.com  
+    我的[github](https://github.com/weiwei02/): https://github.com/weiwei02/  
+    我相信技术能够改变世界。
