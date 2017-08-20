@@ -81,7 +81,7 @@ avatar: /images/favicon.png
 
 ## 引用
 
-  本文是对class文件的学习笔记，笔记的内容并非是原创，而是大量参考其它资料。在写作本文的过程中引用了以下资料，为为在此深深谢过以下资料的作者。
+  本文是对JVM垃圾收集算法的学习笔记，笔记的内容并非是原创，而是大量参考其它资料。在写作本文的过程中引用了以下资料，为为在此深深谢过以下资料的作者。
   1. 《The Java® Virtual Machine Specification · Java SE 8 Edition》
   2. 《深入理解Java虚拟机：JVM高级特性与最佳实践/周志明著.——2版.——北京：机械工业出版社，2013.6》
   3. 《Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide》
