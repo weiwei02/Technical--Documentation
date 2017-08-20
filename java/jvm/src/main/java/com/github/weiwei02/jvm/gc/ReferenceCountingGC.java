@@ -13,7 +13,7 @@ public class ReferenceCountingGC {
     private byte[] bigSize = new byte[_1MB];
 
 
-    /**
+    /**gc内存快照信息如下：
      * [GC (System.gc()) [PSYoungGen: 6511K->1016K(9216K)] 6511K->1412K(19456K), 0.0014686 secs] [Times: user=0.02 sys=0.01, real=0.00 secs]
      [Full GC (System.gc()) [PSYoungGen: 1016K->0K(9216K)] [ParOldGen: 396K->1327K(10240K)] 1412K->1327K(19456K), [Metaspace: 3468K->3468K(1056768K)], 0.0054196 secs] [Times: user=0.00 sys=0.00, real=0.01 secs]
      Heap
