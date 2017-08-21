@@ -63,14 +63,17 @@ category_map:
   ai: 人工智能
   soft: 软件工程
   framework: 架构
+  sentiment: 感悟
 tag_map:
   java: java
   big-data: 大数据
   ai: 人工智能
   soft: 软件工程
+  sentiment: 感悟
   jvm: java虚拟机
   framework: 架构
   theory: 原理
+  life: 人生
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
