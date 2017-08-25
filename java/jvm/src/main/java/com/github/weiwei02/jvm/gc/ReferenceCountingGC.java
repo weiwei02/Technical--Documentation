@@ -1,5 +1,7 @@
 package com.github.weiwei02.jvm.gc;
 
+import java.util.Map;
+
 /**
  * 事实上目前的商用jvm中没有任何虚拟机采用引用计数算来来进行垃圾回收，引用计数算法无法解决对象之间的循环引用的问题
  * @author Wang Weiwei <email>weiwei02@vip.qq.com / weiwei.wang@100credit.com</email>
@@ -31,6 +33,7 @@ public class ReferenceCountingGC {
         ReferenceCountingGC objB = new ReferenceCountingGC();
         objA.instance = objB;
         objB.instance = objA;
+        Map
 
 //        System.out.println("字符串" == new StringBuffer("字符").append("串").toString());
 
