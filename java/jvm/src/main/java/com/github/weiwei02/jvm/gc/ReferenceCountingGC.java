@@ -33,7 +33,7 @@ public class ReferenceCountingGC {
         ReferenceCountingGC objB = new ReferenceCountingGC();
         objA.instance = objB;
         objB.instance = objA;
-        Map
+//        Map
 
 //        System.out.println("字符串" == new StringBuffer("字符").append("串").toString());
 

@@ -305,7 +305,9 @@ avatar: /images/favicon.png
         }
         }
 
-        /**/
+        /*
+
+        */
 
 
  我们看到，jdk8对map类进行了大量的改动，增加了很多带有默认方法的api，其中包括如foreach等实用的api。
@@ -343,7 +345,14 @@ avatar: /images/favicon.png
 
 
         }
-        /***/
+        /**
+        while(i.hasBext()){
+          Entry e = i.next();
+          if(value == e.getValue || value.equals(e.getValue))
+            return true;
+          }
+          return false;
+          ****/
 
   哈希表的基本属性中有一个 threshold 属性，这个属性代表着重新分配哈希空间的阈值，当哈希表中存放的数据超出此值所标识的大小，哈希表就会进行自动扩容并重新计算 threshold 值，其计算公式为 `threshold = (int)(capacity * loadFactor)`。
 
@@ -439,4 +448,7 @@ avatar: /images/favicon.png
 
   HashTable的contains方法只能遍历查找，其时间复杂度是O(n)，在最坏的情况下我们可能需要遍历整个哈希表中的所有Entry。HashTable中可能发生线程安全问题的方法都使用 synchronized 关键字添加互斥锁，如此以来，虽然保证了其线程安全性，但对方法实现互斥会让整个对象都受影响，这也间接的给出了java不推荐在高并发的场景下使用HashTable的解释。其get()方法首先对key进行哈希运算然后通过取模等操作计算出key所在的索引，然后进行遍历操作，其时间复杂度为 O(logn)。这种算法被称之为哈希查找，拥有极高的效率，比较推崇。向哈希表中存放数据时，首先根据key的hash计算索引，然后在索引的table上找到其Entry链表，遍历该链表中是否已存在该key，如果已存在则将value替换，否则就在table上index索引的Entry链表后追加该元素。这种算法原理符合人类的思维形式，比较利于理解，可计算机CPU并不擅长求余计算，进行哈希查找时有一定的计算资源浪费。至于clear()方法就是遍历清除table上的每一个节点，将哈希表的大小置0。等待垃圾回收时直接就将哈希表中的内容全部回收，释放内存。哈希表的keySet()等方法也都是线程安全的，其实现原理就是通过Collections.synchronizedSet()方法将原有的keySet结合哈希表本身作为互斥锁转化成线程安全的集合。keySet的迭代操作使用哈希表内部进行专有优化的迭代器进行迭代，在保证线程安全的前提下，尽量加快迭代速度。
 
-### HashMap 经典集合
+### HashMap 经典容器
+  HashMap是我们在开发中最为钟爱的Map类，使用时简单方便，且性能极高。其内部实现由自己定制化的高效hash算法，jdk8更是对HashMap做出了很多的优化。在使用时HashMap允许null作为其键或值，增加了API的灵活性，但是HashMap并不是线程安全的，请注意不要在并发使用此类。HashMap的内部基本存储方式是大致可以看成是哈希表，当HashMap中的某个哈希桶内部的链表存储的元素达到一定数目时，随着链表的不断拓展，查找元素的算法的时间复杂度将上升到O(n)。为了能够保证HashMap的效率，当链表的程度大于阈值（默认为8）时，这个哈希桶就会被转化成效率更高红黑树。
+
+    HashMap的属性代码：
