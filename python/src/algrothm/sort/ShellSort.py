@@ -31,17 +31,18 @@ def shell_sort(arr):
     while d1 > 0:
         for i in range(d1, len(arr)):
             j = i
-            while j - d1 >= 0:
+            while j >= d1:
                 if arr[j] < arr[j - d1]:
                     swap(arr, j, j - d1)
                     j -= d1
                 else:
+                    # 默认前面的指针都是已经经过排序的序列，故而一旦发现 arr[j] >= arr[j - d1] 则不再进行插入排序
                     break
         d1 = d1 // 2
 
 
 if __name__ == '__main__':
-    arr1 = [1, 5, 2, 0, 1, 14, 42, 65, 27]
+    arr1 = [1, 5, 2, 4, 1, 14, 42, 65, 27, 22]
     print('元集合', arr1)
     shell_sort(arr1)
     print('新集合', arr1)
