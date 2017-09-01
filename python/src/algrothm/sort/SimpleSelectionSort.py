@@ -39,7 +39,7 @@ def simple_select_sort(arr):
 
 
 if __name__ == '__main__':
-    arr1 = [1, 5, 2, 4, 1, 14, 42, 65, 27, 22]
+    arr1 = [1, 5, 2, 4, 0, 14, 42, 65, 27, 22]
     print('元集合', arr1)
     simple_select_sort(arr1)
     print('新集合', arr1)
