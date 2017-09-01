@@ -14,6 +14,8 @@
         <module>jvm</module>
         <module>activity</module>
         <module>springcommon</module>
+        <module>nio</module>
+        <module>kafkatest</module>
     </modules>
     <licenses>
         <license>
