@@ -19,7 +19,7 @@ def insert_sort(source):
     :param source: 
     :return: 
     """
-    for i in range(1, len(source) - 1):
+    for i in range(1, len(source)):
         if source[i] < source[i - 1]:
             j = i - 1
             temp = source[i]
