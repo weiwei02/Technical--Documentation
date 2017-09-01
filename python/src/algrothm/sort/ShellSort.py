@@ -39,6 +39,7 @@ def shell_sort(arr):
                     # 默认前面的指针都是已经经过排序的序列，故而一旦发现 arr[j] >= arr[j - d1] 则不再进行插入排序
                     break
         d1 = d1 // 2
+        print(arr)
 
 
 if __name__ == '__main__':
