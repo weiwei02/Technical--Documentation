@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 9001
+
+mybatis:
+  mapperLocations: classpath:mybatis/mapper/*.xml
+mapper:
+    mappers:
+        - com.github.weiwei02.microservice.data.dao.SuperMapper
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

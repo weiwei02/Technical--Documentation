@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.weiwei02.microservice.provideruser.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.github.weiwei02.microservice.provideruser.model.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+  </resultMap>
+    <insert id="insertListInCluster">INSERT user(username,name,age,balance)VALUES
+        <foreach collection="list" separator="," item="user">
+          (#{user.username,jdbcType=VARCHAR},#{user.name,jdbcType=VARCHAR},#{user.age,jdbcType=INTEGER},#{user.balance,jdbcType=DECIMAL})
+        </foreach>
+    </insert>
+</mapper>

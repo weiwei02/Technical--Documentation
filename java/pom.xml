@@ -16,6 +16,8 @@
         <module>springcommon</module>
         <module>nio</module>
         <module>kafkatest</module>
+        <module>microserviceparent</module>
+        <module>micro-service-data</module>
     </modules>
     <licenses>
         <license>
