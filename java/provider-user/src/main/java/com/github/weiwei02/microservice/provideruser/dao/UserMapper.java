@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface UserMapper extends SuperMapper<User> {
-    void insertListInCluster(@Param("list") List<User> users);
 }

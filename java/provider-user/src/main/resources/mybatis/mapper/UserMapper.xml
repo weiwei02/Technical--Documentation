@@ -11,9 +11,4 @@
     <result column="age" jdbcType="INTEGER" property="age" />
     <result column="balance" jdbcType="DECIMAL" property="balance" />
   </resultMap>
-    <insert id="insertListInCluster">INSERT user(username,name,age,balance)VALUES
-        <foreach collection="list" separator="," item="user">
-          (#{user.username,jdbcType=VARCHAR},#{user.name,jdbcType=VARCHAR},#{user.age,jdbcType=INTEGER},#{user.balance,jdbcType=DECIMAL})
-        </foreach>
-    </insert>
 </mapper>
