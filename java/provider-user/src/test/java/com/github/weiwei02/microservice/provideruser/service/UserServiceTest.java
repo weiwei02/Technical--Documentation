@@ -1,6 +1,7 @@
 package com.github.weiwei02.microservice.provideruser.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.pagehelper.Page;
 import com.github.weiwei02.microservice.provideruser.ProviderUserApplication;
 import com.github.weiwei02.microservice.provideruser.dao.UserMapper;
 import com.github.weiwei02.microservice.provideruser.model.User;
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 import tk.mybatis.mapper.entity.Example;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +67,7 @@ public class UserServiceTest {
         Thread.sleep(5000);
     }
 
-    @Test
+   /* @Test
     public void insertListInCluster(){
     List<User> users = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
@@ -77,7 +79,7 @@ public class UserServiceTest {
             users.add(user);
         }
     userMapper.insertListInCluster(users);
-    }
+    }*/
 @Test
     public void insertList1(){
     List<User> users = new ArrayList<>();
@@ -91,4 +93,26 @@ public class UserServiceTest {
         }
     }
 
+
+    @Test
+    public void selectWithPage() throws IOException {
+        User user = new User();
+        user.setAge(10);
+        ObjectMapper objectMapper = new ObjectMapper();
+        Page<User> page =  (Page<User>)userService.selectWithPage(1, 10, user);
+        System.out.println(page.getTotal());
+        System.out.println(page.getPages());
+        System.out.println(page.size());
+        objectMapper.writeValue(System.out,page);
+    }
+
+    @Test
+    public void insert1(){
+        User user = new User();
+        user.setAge((int) (Math.random() * 50));
+        user.setName("吴梦雅");
+        user.setUsername("wu");
+        user.setBalance(new BigDecimal(Math.random() * 1000));
+        userMapper.insertUseGeneratedKeys(user);
+    }
 }

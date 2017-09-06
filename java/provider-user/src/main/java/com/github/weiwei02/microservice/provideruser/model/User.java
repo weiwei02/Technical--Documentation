@@ -1,13 +1,19 @@
 package com.github.weiwei02.microservice.provideruser.model;
 
+import com.github.weiwei02.microservice.data.dao.BaseEntity;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.*;
 
-public class User {
+public class User implements Serializable{
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    public User() {
+        super();
+    }
 
     private String username;
 
@@ -17,19 +23,6 @@ public class User {
 
     private BigDecimal balance;
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * @return username
@@ -85,5 +78,13 @@ public class User {
      */
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
