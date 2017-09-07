@@ -46,18 +46,15 @@
         </filter>
     </appender>
 
-    <!--<logger name="druid.sql.Statement"  level="DEBUG" />-->
-    <!--<logger name="druid.sql.ResultSet"  level="DEBUG" />-->
+    <logger name="druid.sql.Statement"  level="DEBUG" />
+    <logger name="druid.sql.ResultSet"  level="DEBUG" />
     <logger name="org.springframework.boot.context.embedded.tomcat" level="INFO" />
-    <logger name="com.github.weiwei02.microservice" level="INFO">
-        <appender-ref ref="STDOUT" />
-    </logger>
 
     <!--TRACE, DEBUG, INFO, WARN, ERROR, ALL and OFF -->
-    <!--<root>-->
-        <!--<level value="INFO" />-->
-        <!--<appender-ref ref="STDOUT" />-->
-        <!--&lt;!&ndash;<appender-ref ref="FILE" />&ndash;&gt;-->
-        <!--&lt;!&ndash;<appender-ref ref="ERROR_FILE" />&ndash;&gt;-->
-    <!--</root>-->
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="FILE" />-->
+        <!--<appender-ref ref="ERROR_FILE" />-->
+    </root>
 </configuration>

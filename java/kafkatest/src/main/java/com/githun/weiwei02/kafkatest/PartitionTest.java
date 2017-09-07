@@ -37,18 +37,15 @@ public class PartitionTest {
         int i =1;
         while (i < 10){
             ProducerRecord<String, String> record = new ProducerRecord<String, String>("test", Math.random()* 1000 + ".message");
-            producer.send(record, new Callback() {
-                @Override
-                public void onCompletion(RecordMetadata metadata, Exception e) {
-                    // TODO Auto-generated method stub
-                    if (e != null)
-                        LOG.error("the producer has a error:" + e.getMessage());
-                    else {
-                        LOG.info("The offset of the record we just sent is: " + metadata.offset());
-                        LOG.info("The partition of the record we just sent is: " + metadata.partition());
-                    }
-
+            producer.send(record, (metadata, e) -> {
+                // TODO Auto-generated method stub
+                if (e != null)
+                    LOG.error("the producer has a error:" + e.getMessage());
+                else {
+                    LOG.info("The offset of the record we just sent is: " + metadata.offset());
+                    LOG.info("The partition of the record we just sent is: " + metadata.partition());
                 }
+
             });
             i++;
         }

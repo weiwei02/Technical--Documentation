@@ -1,14 +1,13 @@
 package com.github.weiwei02.microservice.provideruser.service;
 
-import com.github.pagehelper.Page;
 import com.github.weiwei02.microservice.data.dao.SelectPageInterface;
-import com.github.weiwei02.microservice.data.filter.annotations.AutoPage;
 import com.github.weiwei02.microservice.provideruser.dao.UserMapper;
 import com.github.weiwei02.microservice.provideruser.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Wang Weiwei <email>weiwei02@vip.qq.com / weiwei.wang@100credit.com</email>
@@ -23,7 +22,6 @@ public class UserService implements SelectPageInterface<User> {
         return userMapper.selectAll();
     }
 
-//    @AutoPage
     public List<User> selectWithPage(Integer pageNum, Integer pageSize, User user){
         return userMapper.select(user);
     }

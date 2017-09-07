@@ -23,7 +23,6 @@
         <!-- !!!! Model Configurations !!!! -->
         <javaModelGenerator targetPackage="com.github.weiwei02.microservice.provideruser.model" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
-            <property name="rootClass" value=""
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- !!!! Mapper XML Configurations !!!! -->

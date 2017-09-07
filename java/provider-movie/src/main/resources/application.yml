@@ -2,10 +2,10 @@ spring:
   profiles:
     active: dev
   application:
-    name: provider-user
+    name: provider-movie
 
 server:
-  port: 9002
+  port: 9003
 
 mybatis:
   mapperLocations: classpath:mybatis/mapper/*.xml
