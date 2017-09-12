@@ -48,7 +48,8 @@ def merge(arr1, arr2, start, mid, end):
     :return: 
     """
     i, j = start, mid + 1
-    while i <= mid and j <= end:
+    k = start
+    while start <= mid and j <= end:
         if arr1[start] < arr1[j]:
             arr2[i] = arr1[start]
             start += 1
@@ -60,31 +61,27 @@ def merge(arr1, arr2, start, mid, end):
         arr2[i] = arr1[start]
         i += 1
         start += 1
-    while j <= end:
-        arr2[i] = arr1[j]
-        j += 1
-        i += 1
+    while k < i:
+        arr1[k] = arr2[k]
+        k += 1
 
 
-def merge_sort(arr1, arr2, length):
+def merge_sort(arr1, arr2, start, length):
     step = 1
     while step < length:
         s = step
         step = 2 * s
-        i = 0
+        i = start
         while step + i <= length:
             merge(arr1, arr2, i, i + s - 1, i + step - 1)
-            i += step
-        if i + s <= length:
-            merge(arr1, arr2, i, i + s - 1, length - 1)
+            i = i + step
         # 保证下次交换还是从arr1 向 arr2 中进行交换
-        tmp = arr1
-        arr1 = arr2
-        arr2 = tmp
+        if i + s < length:
+            merge(arr1, arr2, i, i + s - 1, length - 1)
 
 
 if __name__ == '__main__':
-    arr1 = [1, 5, 2, 4, 0, 14, 42, 65, 27, 22]
+    arr1 = [11, 15, 12, 14, 13, 10, 11,9,0,17,24]
     print('元集合', arr1)
-    merge_sort(arr1, [item for item in range(10)], len(arr1))
+    merge_sort(arr1,[item for item in range(len(arr1))], 0, len(arr1))
     print('新集合', arr1)

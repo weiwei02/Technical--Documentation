@@ -1,4 +1,0 @@
-com\github\weiwei02\microservice\data\config\datasource\MybatisConfiguration.class
-com\github\weiwei02\microservice\data\config\filter\DruidStatFilter.class
-com\github\weiwei02\microservice\data\config\filter\DruidStatViewServlet.class
-com\github\weiwei02\microservice\data\dao\SuperMapper.class
