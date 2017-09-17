@@ -230,3 +230,7 @@ java     | openjdk      | 1.8.0_141
   本项目和文档中所用的内容仅供学习和研究之用，转载或引用时请指明出处。如果你对文档有疑问或问题，请在项目中给我留言或发email到
   weiwei02@vip.qq.com   我的[github](https://github.com/weiwei02/):
   https://github.com/weiwei02/   我相信技术能够改变世界 。
+
+## 链接
+  * 上篇文章（无）
+  * 下篇文章[ElasticSearch2轻量级搜索](http://www.jianshu.com/p/8fbb867c3d19)
