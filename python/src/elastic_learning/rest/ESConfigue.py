@@ -44,11 +44,23 @@ class ESRequest:
     def __reconstruct_request_url(self):
         self.__request_url = self.__url + self.__index + self.__i_type
 
-    def get(self, params=None,  request_url=""):
+    def get(self, params=None, request_url=""):
+        self.__http_request(requests.get, params, request_url)
+
+    def post(self, param, request_url=""):
+        self.__http_request(requests.post, param, request_url)
+
+    def put(self, param, request_url=""):
+        self.__http_request(requests.put, param, request_url)
+
+    def delete(self, request_url=""):
+        self.__http_request(requests.delete, None, request_url)
+
+    def __http_request(self, method, param, request_url=""):
         if request_url == "" or request_url is None:
-            return requests.get(self.__request_url, params).json()
+            return method(self.__request_url, param).json()
         else:
-            return requests.get(self.__request_url + "?" + request_url, params).json()
+            return method(self.__request_url + "?" + request_url, param).json()
 
 
 class BlogsRequest(ESRequest):
