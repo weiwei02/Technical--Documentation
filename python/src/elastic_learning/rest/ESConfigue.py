@@ -44,23 +44,25 @@ class ESRequest:
     def __reconstruct_request_url(self):
         self.__request_url = self.__url + self.__index + self.__i_type
 
-    def get(self, params=None, request_url=""):
-        self.__http_request(requests.get, params, request_url)
+    def get(self, params=None, request_url="", end_request=""):
+        return self.__http_request(requests.get, params, request_url, end_request)
 
-    def post(self, param, request_url=""):
-        self.__http_request(requests.post, param, request_url)
+    def post(self, param, request_url="", end_request=""):
+        return self.__http_request(requests.post, param, request_url, end_request)
 
-    def put(self, param, request_url=""):
-        self.__http_request(requests.put, param, request_url)
+    def put(self, param, request_url="", end_request=""):
+        return self.__http_request(requests.put, param, request_url, end_request)
 
-    def delete(self, request_url=""):
-        self.__http_request(requests.delete, None, request_url)
+    def delete(self, request_url="", end_request=""):
+        return self.__http_request(requests.delete, None, request_url, end_request)
 
-    def __http_request(self, method, param, request_url=""):
+    def __http_request(self, method, param, request_url="", end_request=""):
         if request_url == "" or request_url is None:
-            return method(self.__request_url, param).json()
+            a = method(self.__request_url + end_request, json=param)
+            return a.json()
         else:
-            return method(self.__request_url + "?" + request_url, param).json()
+            a = method(self.__request_url + end_request + "?" + request_url, json=param)
+            return a.json()
 
 
 class BlogsRequest(ESRequest):
