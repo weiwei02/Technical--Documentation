@@ -7,8 +7,6 @@
 """
 import requests
 URL = "http://ubuntu:9200/"
-BLOGS = "blogs/"
-ARTICLES = "articles/"
 SEARCH = "_search"
 
 
@@ -63,19 +61,3 @@ class ESRequest:
         else:
             a = method(self.__request_url + end_request + "?" + request_url, json=param)
             return a.json()
-
-
-class BlogsRequest(ESRequest):
-    """
-    Blogs 索引请求类
-    """
-    def __init__(self):
-        super().__init__(URL, BLOGS, "")
-
-
-class ArticleRequest(BlogsRequest):
-    """
-    Blogs索引 articles类型请求类
-    """
-    def __init__(self):
-        super().__init__().i_type = ARTICLES

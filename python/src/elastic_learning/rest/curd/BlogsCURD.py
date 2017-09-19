@@ -54,7 +54,5 @@ def search_all():
 def select(id):
     return es_request.get(None, end_request=id)
 
-
-
 if __name__ == '__main__':
-    print(insert_ar())
+    print(select("1"))
